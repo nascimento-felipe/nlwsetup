@@ -1,21 +1,69 @@
+import { Alert } from "@mui/material";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { FormEvent, useState } from "react";
 import { firebaseAuth } from "../lib/firebase";
+import { Signup } from './Signup/Signup';
 
-export function LandingPage() {
+interface LandingPageProps {
+  shouldShowSuccessAlert: (userSignup: boolean) => void;
+}
+
+export function LandingPage({ shouldShowSuccessAlert }: LandingPageProps) {
+
+  const [showErrorAlert, setShowErrorAlert] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
 
-    await signInWithEmailAndPassword(firebaseAuth, email, password);
+    try {
+
+      if (email == '' || password == '') {
+        setErrorMessage('Digite um email e uma senha para fazer login.')
+        setShowErrorAlert(true);
+        return;
+      }
+
+      setLoading(true);
+      await signInWithEmailAndPassword(firebaseAuth, email, password);
+
+    } catch (e) {
+
+      if (e instanceof Error) {
+        console.log(`${e.message}`);
+      }
+
+      setErrorMessage('O email ou senha digitados não existem. Por favor, tente novamente.');
+      setShowErrorAlert(true);
+
+    }
+    finally {
+      setLoading(false);
+    }
+
+  }
+
+  function showAlert(signup: boolean) {
+    if (signup) {
+      shouldShowSuccessAlert(true);
+    }
   }
 
   return (
     <div className="w-screen h-screen flex justify-center">
-
       <form onSubmit={handleSubmit} className="max-h-48 mt-48 flex flex-col items-center justify-center">
+
+        {
+          showErrorAlert &&
+          <div className='w-full flex justify-center m-6'>
+            <Alert severity="error" onClose={() => setShowErrorAlert(false)} variant="filled" > {errorMessage} </Alert>
+          </div>
+        }
+
 
         <h1 className="text-4xl mt-">Login</h1>
         <hr className="w-16 mt-2 bg-violet-500" />
@@ -60,8 +108,13 @@ export function LandingPage() {
           className="mt-10 p-3 w-72 bg-violet-700 rounded-xl
           hover:bg-violet-500 transition-colors"
         >
-          Login
+          {loading ?
+            "Loading..." : "Login"}
         </button>
+
+        <div className="mt-10">
+          <Signup shouldShowAlert={showAlert} />
+        </div>
       </form>
     </div>
   )

@@ -1,17 +1,16 @@
-import { Header } from './components/Header';
-import { SummaryTable } from './components/SummaryTable';
-import './styles/global.css';
-import './lib/dayjs';
-import { Accounts } from './components/Accounts';
 import { Alert } from '@mui/material';
 import { useState } from 'react';
-import { firebaseAuth } from './lib/firebase';
+import { Accounts } from './components/Accounts';
+import { Header } from './components/Header';
 import { LandingPage } from './components/LandingPage';
-import { Logout } from './components/Logout';
+import { SummaryTable } from './components/SummaryTable';
+import './lib/dayjs';
+import { firebaseAuth } from './lib/firebase';
+import './styles/global.css';
 
 
 export function App() {
-  const [showAlert, setShowAlert] = useState(false);
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
   const [userLogged, setUserLogged] = useState(false);
 
   firebaseAuth.onAuthStateChanged(user => {
@@ -24,13 +23,13 @@ export function App() {
     }
   });
 
-  function shouldShowAlert(signup: boolean) {
+  function shouldShowSuccessAlert(signup: boolean) {
     if (signup) {
-      setShowAlert(true);
+      setShowSuccessAlert(true);
       return;
     }
 
-    setShowAlert(false);
+    setShowSuccessAlert(false);
   }
 
   return (
@@ -41,13 +40,13 @@ export function App() {
             <div className='w-full max-w-5xl px-6 flex flex-col gap-16'>
 
               {
-                showAlert &&
+                showSuccessAlert &&
                 <div className='w-full flex justify-center'>
-                  <Alert severity="success" onClose={() => setShowAlert(false)} variant="filled" >Usuário cadastrado com sucesso!</Alert>
+                  <Alert severity="success" onClose={() => setShowSuccessAlert(false)} variant="filled" >Usuário cadastrado com sucesso!</Alert>
                 </div>
               }
 
-              <Accounts shouldShowAlert={shouldShowAlert} />
+              <Accounts />
               <Header />
 
               <SummaryTable />
@@ -57,7 +56,7 @@ export function App() {
 
           :
 
-          <LandingPage />
+          <LandingPage shouldShowSuccessAlert={shouldShowSuccessAlert}/>
 
       }
     </div>
