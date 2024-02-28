@@ -4361,7 +4361,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.10.0"],\
             ["execa", "npm:1.0.0"],\
             ["hermes-profile-transformer", "npm:0.0.6"],\
-            ["ip", "npm:1.1.8"],\
+            ["ip", "npm:1.1.9"],\
             ["node-stream-zip", "npm:1.15.0"],\
             ["ora", "npm:5.4.1"],\
             ["prompts", "npm:2.4.2"],\
@@ -4382,7 +4382,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@react-native-community/cli-tools", "npm:9.2.1"],\
             ["chalk", "npm:4.1.2"],\
             ["hermes-profile-transformer", "npm:0.0.6"],\
-            ["ip", "npm:1.1.8"]\
+            ["ip", "npm:1.1.9"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8794,10 +8794,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["ip", [\
-        ["npm:1.1.8", {\
-          "packageLocation": "./.yarn/cache/ip-npm-1.1.8-abea558b72-a2ade53eb3.zip/node_modules/ip/",\
+        ["npm:1.1.9", {\
+          "packageLocation": "./.yarn/cache/ip-npm-1.1.9-e72dd3cc0a-b6d91fd45a.zip/node_modules/ip/",\
           "packageDependencies": [\
-            ["ip", "npm:1.1.8"]\
+            ["ip", "npm:1.1.9"]\
           ],\
           "linkType": "HARD"\
         }],\
