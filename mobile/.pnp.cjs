@@ -34,7 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@react-navigation/native-stack", "virtual:fce6b0854070515385fd765c9030a6ad6aa7f43d8f59739cc095b2932602e5de68920dda26d5bac2f7fff947e7e9b257353fbc1ba6c4f630aaace17aebc96a7f#npm:6.9.13"],\
             ["@types/react", "npm:18.0.38"],\
             ["@types/react-native", "npm:0.70.14"],\
-            ["axios", "npm:1.4.0"],\
+            ["axios", "npm:1.6.1"],\
             ["clsx", "npm:1.2.1"],\
             ["dayjs", "npm:1.11.9"],\
             ["expo", "npm:47.0.14"],\
@@ -5524,11 +5524,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["axios", [\
-        ["npm:1.4.0", {\
-          "packageLocation": "./.yarn/cache/axios-npm-1.4.0-4d7ce8ca3e-7fb6a4313b.zip/node_modules/axios/",\
+        ["npm:1.6.1", {\
+          "packageLocation": "./.yarn/cache/axios-npm-1.6.1-ffaff76449-573f03f59b.zip/node_modules/axios/",\
           "packageDependencies": [\
-            ["axios", "npm:1.4.0"],\
-            ["follow-redirects", "virtual:4d7ce8ca3e1e44d82523fba2ad95e1be18c4e9f8dec6d551377587540da3ed75bd8bd3e812280309a3b90cfdb0560f076f3552a20839f7f15665207a4fbd588a#npm:1.15.2"],\
+            ["axios", "npm:1.6.1"],\
+            ["follow-redirects", "virtual:ffaff76449f02e83712a7d24e03c564489516739c78ebeffb0fbcdb3893ad9a0e48504f9acfa70fe6f16debe9c8dabde3679d63bf648278ea98a5ff38cf77a9e#npm:1.15.2"],\
             ["form-data", "npm:4.0.0"],\
             ["proxy-from-env", "npm:1.1.0"]\
           ],\
@@ -7959,10 +7959,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:4d7ce8ca3e1e44d82523fba2ad95e1be18c4e9f8dec6d551377587540da3ed75bd8bd3e812280309a3b90cfdb0560f076f3552a20839f7f15665207a4fbd588a#npm:1.15.2", {\
-          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-359bc4c55c/0/cache/follow-redirects-npm-1.15.2-1ec1dd82be-faa66059b6.zip/node_modules/follow-redirects/",\
+        ["virtual:ffaff76449f02e83712a7d24e03c564489516739c78ebeffb0fbcdb3893ad9a0e48504f9acfa70fe6f16debe9c8dabde3679d63bf648278ea98a5ff38cf77a9e#npm:1.15.2", {\
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-c2d5794c26/0/cache/follow-redirects-npm-1.15.2-1ec1dd82be-faa66059b6.zip/node_modules/follow-redirects/",\
           "packageDependencies": [\
-            ["follow-redirects", "virtual:4d7ce8ca3e1e44d82523fba2ad95e1be18c4e9f8dec6d551377587540da3ed75bd8bd3e812280309a3b90cfdb0560f076f3552a20839f7f15665207a4fbd588a#npm:1.15.2"],\
+            ["follow-redirects", "virtual:ffaff76449f02e83712a7d24e03c564489516739c78ebeffb0fbcdb3893ad9a0e48504f9acfa70fe6f16debe9c8dabde3679d63bf648278ea98a5ff38cf77a9e#npm:1.15.2"],\
             ["@types/debug", null],\
             ["debug", null]\
           ],\
@@ -10537,7 +10537,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@react-navigation/native-stack", "virtual:fce6b0854070515385fd765c9030a6ad6aa7f43d8f59739cc095b2932602e5de68920dda26d5bac2f7fff947e7e9b257353fbc1ba6c4f630aaace17aebc96a7f#npm:6.9.13"],\
             ["@types/react", "npm:18.0.38"],\
             ["@types/react-native", "npm:0.70.14"],\
-            ["axios", "npm:1.4.0"],\
+            ["axios", "npm:1.6.1"],\
             ["clsx", "npm:1.2.1"],\
             ["dayjs", "npm:1.11.9"],\
             ["expo", "npm:47.0.14"],\
